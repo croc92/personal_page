@@ -2,8 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: 'Roboto', sans-serif; */
-    /* font-family: 'Dancing Script', cursive; */
 }
 
 :root {
@@ -14,19 +12,22 @@
     --fam1: 'Roboto', sans-serif;
     --fam2: 'Poppins', sans-serif;
     --fam3: 'Dancing Script', cursive;
-
-
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-
-h1,
-h3 {
+h1 {
     font-family: var(--fam2);
     color: var(--black1);
+    font-size: 2.2rem;
+}
+
+h3 {
+    font-family: var(--fam3);
+    color: var(--black1);
+    font-size: 2.2rem;
 }
 
 li {
@@ -39,11 +40,14 @@ a {
 }
 
 ul a {
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 3rem;
 }
 
 .logo a {
-    padding: 0.5rem 1rem;
+    padding: 0.4rem 0.4rem;
+    border: 1px solid var(--black1);
+    border-radius: 50%;
+    margin-left: 1rem;
 }
 
 ul a:hover {
@@ -62,11 +66,10 @@ ul a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
 }
 
 .nav-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     height: 52px;
     width: 100%;
@@ -94,7 +97,7 @@ ul a:hover {
 /* 2nd - About page */
 
 .mid-container {
-    /* background-image: url(https://i.ibb.co/3kv4LNx/6114558-C-3-E16-4744-A029-45-B8360-AA5-FA.jpg); */
+    background-image: url(https://i.ibb.co/3kv4LNx/6114558-C-3-E16-4744-A029-45-B8360-AA5-FA.jpg);
     background-color: var(--black1);
     background-position: center;
     background-repeat: no-repeat;
@@ -102,8 +105,6 @@ ul a:hover {
     height: 100vh;
     display: flex;
     align-items: center;
-
-
 }
 
 .opac-bg {
@@ -111,10 +112,18 @@ ul a:hover {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr 1fr;
     align-items: center;
-    /* background-color: rgba(242, 244, 248, 0.6);
-    border-radius: 50% 18% 50% 18%; */
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 1% 1% 1% 1%;
     width: 90%;
-    margin-left: 5%;
+    margin: 5%;
+
+}
+
+.grid-pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .separator {
@@ -124,16 +133,18 @@ ul a:hover {
 #ppic {
     width: 150px;
     height: 150px;
+    border: 1px solid var(--black1);
     border-radius: 50%;
     margin: 1rem;
 }
 
 .short-info {
-    font-family: 'Roboto', sans-serif;
-    color: whitesmoke;
-    font-size: 1.05rem;
+    font-family: var(--fam2);
+    color: var(--black1);
+    font-size: 1.2rem;
     margin: 1rem;
     line-height: 1.5rem;
+    padding: 5px;
 }
 
 /* 3rd page - CV page */
@@ -142,10 +153,10 @@ ul a:hover {
 
 .cv-container {
     display: grid;
-    grid-template-columns: 1.2fr 3fr;
-    height: 92vh;
-    margin: 4vh;
-    background-color: yellow;
+    grid-template-columns: 1fr 3fr;
+    height: auto;
+    padding: 3vh;
+    /* margin iken arkaplan duzgun. padding bozdu */
     box-shadow: 0 20px 20px rgb(0, 0, 0, 0.4);
 
 }
@@ -161,7 +172,13 @@ ul a:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5px;
+    padding: 10px 5px;
+}
+
+
+.cv-left-context {
+    /* sonradan ekledim */
+    min-width: 200px;
 }
 
 .cv-pic {
@@ -178,8 +195,8 @@ ul a:hover {
     margin: 0.5rem;
 }
 
-.all-text-below-cv-pic {
-    padding: 0 5px 0 20px;
+.text-below-cv-pic {
+    padding: 0;
 }
 
 .cv-left-hr {
@@ -197,6 +214,10 @@ ul a:hover {
     display: inline-block;
 }
 
+#hidden-div .cv-left-titles {
+    margin-top: 1.5rem;
+}
+
 .cv-left-subtitles {
     color: var(--gray-cv);
     font-size: 0.8rem;
@@ -206,25 +227,43 @@ ul a:hover {
     font-size: 0.8rem;
 }
 
+.cv-left-skills-hobbies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 200px;
+}
+
+.cv-left-skills-hobbies p {
+    font-size: 0.8rem;
+    font-family: var(--fam2);
+    padding: 4px 0;
+}
+
+.cv-left-bars {
+    width: 100%;
+    height: 2px;
+    background-color: lightgray;
+}
+
+/* CV Right Side */
+/* CV Right Side */
+/* CV Right Side */
+
 .cv-right {
     background-color: whitesmoke;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    height: auto;
 }
-
-
-/* CV Right Side */
-/* CV Right Side */
-/* CV Right Side */
 
 .cv-right-title {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 173px;
+    height: 177px;
 }
 
 .cv-right-title h3 {
@@ -245,7 +284,6 @@ ul a:hover {
     flex-direction: column;
     align-items: center;
     margin: 5px;
-    width: 96%;
 }
 
 .work-exp h4 {
@@ -266,7 +304,6 @@ ul a:hover {
 
 .work-exp-subtext p {
     margin: 2px 0;
-
 }
 
 .year {
@@ -289,6 +326,10 @@ ul a:hover {
     font-size: 0.9rem;
     color: #333;
     padding: 5px 2rem;
+}
+
+.data p {
+    min-width: 300px;
 }
 
 #hr-1 {
@@ -364,6 +405,65 @@ ul a:hover {
     line-height: 3rem;
 }
 
+#hidden-div-2 {
+    display: none;
+}
+
+#social {
+    display: none;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 0 0;
+    font-size: 1.3rem;
+}
+
+.fa {
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    /* border: 2px solid lightslategray;
+    border-radius: 50%; */
+}
+
+.fa:hover {
+    opacity: 0.8;
+}
+
+.fa-linkedin {
+    /* background: #007bb5; */
+    color: #007bb5;
+}
+
+.fa-youtube {
+    /* background: #bb0000; */
+    color: white;
+}
+
+.fa-instagram {
+    /* background: #125688; */
+    background-image: linear-gradient(to left bottom, blue, violet, indigo, red, yellow, orange);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.fa-skype {
+    /* background: #00aff0; */
+    color: #00aff0;
+}
+
+.fa-soundcloud {
+    color: #ff5700;
+}
+
+.fa-github {
+    color: white;
+}
+
 /* Mobile design */
 
 @media (max-width: 480px) {
@@ -385,7 +485,7 @@ ul a:hover {
     .short-info {
         font-family: var(--fam1);
         font-size: 1rem;
-        margin: 4vh 0;
+        margin: 3vh 0;
         line-height: 1.2rem;
     }
 
@@ -409,13 +509,14 @@ ul a:hover {
     .cv-container {
         display: flex;
         flex-direction: column;
-        height: 297vh;
         margin: 1vh;
+        padding: 0;
     }
 
-    .cv-left {
-        height: auto;
-    }
+
+    /* .cv-left-context {
+        height: 100vh;
+    } */
 
     #cv-pic {
         width: 200px;
@@ -424,8 +525,9 @@ ul a:hover {
         margin: 1rem;
     }
 
-    .all-text-below-cv-pic {
+    .text-below-cv-pic {
         padding: 0;
+        min-width: 260px;
     }
 
     .cv-left-titles {
@@ -449,6 +551,10 @@ ul a:hover {
         margin-top: 3vh;
     }
 
+    .cv-right-title h3 {
+        font-size: 1.2rem;
+    }
+
     .work-exp h4 {
         font-size: 1.2rem;
         font-weight: bold;
@@ -461,6 +567,7 @@ ul a:hover {
         display: flex;
         flex-direction: column;
         padding: 0;
+        text-align: center;
     }
 
     .work-exp-subtext p {
@@ -552,6 +659,43 @@ ul a:hover {
         font-family: var(--fam2);
         margin: 1rem 1rem;
         line-height: 3rem;
+    }
+
+    .cv-left-skills-hobbies {
+        display: none;
+    }
+
+    .cv-left-socials {
+        display: none;
+    }
+
+    .social-buttons {
+        margin: 10px 0 20px 0;
+    }
+
+    #hidden-div {
+        display: none;
+    }
+
+    #hidden-div-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #social {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+}
+
+@media (max-height: 668px) {
+
+    .short-info {
+        margin: 2px;
     }
 
 }
